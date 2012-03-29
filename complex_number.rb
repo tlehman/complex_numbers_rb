@@ -32,6 +32,7 @@ class ComplexNumber
   end
 
   def /(z)
+    z = ComplexNumber.new(z, 0) unless z.is_a? ComplexNumber
     coef = (z.im**2 + z.re**2)
     div_re = (@im*z.im + @re*z.re)/coef
     div_im = (-@re*z.im + @im*z.re)/coef

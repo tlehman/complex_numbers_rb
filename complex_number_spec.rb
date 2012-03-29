@@ -44,7 +44,7 @@ describe ComplexNumber do
     end
 
     it 'should raise a ZeroDivisionError when divided by 0+0i' do
-      lambda { @v/0 }.should raise ZeroDivisionError
+      lambda { @v/0 }.should raise_error
     end
   end
 end
