@@ -13,7 +13,7 @@ class ComplexNumber
   end
 
   def *(z)
-		z = ComplexNumber.new(z, 0) unless z.is_a? ComplexNumber
+    z = ComplexNumber.new(z, 0) unless z.is_a? ComplexNumber
     ComplexNumber.new @re*z.re - @im*z.im, @im*z.re + @re*z.im
   end
 
@@ -22,21 +22,21 @@ class ComplexNumber
     ComplexNumber.new @re, -@im
   end
 
-	def ^(n)
-		nth_pow = ComplexNumber.new 1, 0
-		raise StandardError unless n.is_a?(Integer) || n<0
-		n.times do |i| 
-			nth_pow = self*nth_pow
-		end
-		nth_pow
-	end
+  def ^(n)
+    nth_pow = ComplexNumber.new 1, 0
+    raise StandardError unless n.is_a?(Integer) || n<0
+    n.times do |i| 
+      nth_pow = self*nth_pow
+    end
+    nth_pow
+  end
 
-	def /(z)
-		coef = (z.im**2 + z.re**2)
-		div_re = (@im*z.im + @re*z.re)/coef
-		div_im = (-@re*z.im + @im*z.re)/coef
-		ComplexNumber.new div_re, div_im
-	end
+  def /(z)
+    coef = (z.im**2 + z.re**2)
+    div_re = (@im*z.im + @re*z.re)/coef
+    div_im = (-@re*z.im + @im*z.re)/coef
+    ComplexNumber.new div_re, div_im
+  end
 
   def to_s
     # the to_s function outputs a string automatically, for example:
