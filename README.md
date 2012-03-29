@@ -13,8 +13,8 @@ starting to appreciate the methodology.
 This is just the beginning, but so far I have used TDD to drive the 
 development of 
 
-	* raising a ComplexNumber to a power (n >= 0)
-	* dividing a ComplexNumber by another (nonzero) ComplexNumber
+* raising a ComplexNumber to a power (n >= 0)
+* dividing a ComplexNumber by another (nonzero) ComplexNumber
 
 Also, using TDD, I was able to modify the exponentiation and division methods 
 to allow for cases when the argument was zero. I noticed that starting with 
